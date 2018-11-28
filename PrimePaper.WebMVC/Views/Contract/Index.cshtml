@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PrimePaper.Models.ContractListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentReceived)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentsMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractLength)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentReceived)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentsMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractLength)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
