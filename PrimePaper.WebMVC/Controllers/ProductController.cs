@@ -16,5 +16,21 @@ namespace PrimePaper.WebMVC.Controllers
             var model = new ProductListItem[0];
             return View(model);
         }
+        // GET
+        public ActionResult Create()
+        {
+            return View();
+        }
+        //Add code here vvvv
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(ProductCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }
