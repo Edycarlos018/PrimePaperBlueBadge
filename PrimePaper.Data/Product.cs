@@ -10,7 +10,7 @@ namespace PrimePaper.Data
     public class Product
     {
         [Key]
-        public int ProductID { get; set; }
+        public int ProductId { get; set; }
 
         [Required]
         public Guid OwnerId { get; set; }

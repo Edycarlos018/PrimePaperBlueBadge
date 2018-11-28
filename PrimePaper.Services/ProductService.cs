@@ -33,5 +33,27 @@ namespace PrimePaper.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public IEnumerable<ProductListItem> GetProducts()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Products
+                        .Where(e => e.OwnerId == _userId)
+                        .Select(
+                            e =>
+                                new ProductListItem
+                                {
+                                    ProductId = e.ProductId,
+                                    Type = e.Type,
+                                    Quantity = e.Quantity,
+                                    Price = e.Price
+                                }
+                        );
+                 return query.ToArray();
+            }
+        }
     }
 }

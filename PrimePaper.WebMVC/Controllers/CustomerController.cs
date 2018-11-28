@@ -1,4 +1,6 @@
-﻿using PrimePaper.Models;
+﻿using Microsoft.AspNet.Identity;
+using PrimePaper.Models;
+using PrimePaper.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace PrimePaper.WebMVC.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            var model = new CustomerListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CustomerService(userId);
+            var model = service.GetCustomers();
+
             return View(model);
         }
         //GET
@@ -25,11 +30,27 @@ namespace PrimePaper.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CustomerCreate model)
         {
-            if (ModelState.IsValid)
-            {
+            if (!ModelState.IsValid) return View(model);
 
-            }
+            var service = CreateCustomerService();
+
+            if (service.CreateCustomer(model))
+            {
+                TempData["SaveResult"] = "Your product was created. ";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Product could not be created.");
+
             return View(model);
+
+        }
+
+        private CustomerService CreateCustomerService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CustomerService(userId);
+            return service;
         }
     }
 }

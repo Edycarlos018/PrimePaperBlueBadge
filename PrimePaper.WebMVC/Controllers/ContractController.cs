@@ -1,4 +1,6 @@
-﻿using PrimePaper.Models;
+﻿using Microsoft.AspNet.Identity;
+using PrimePaper.Models;
+using PrimePaper.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace PrimePaper.WebMVC.Controllers
         // GET: Contract
         public ActionResult Index()
         {
-            var model = new ContractListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ContractService(userId);
+            var model = service.GetContracts();
+
             return View(model);
         }
         //GET
@@ -25,11 +30,26 @@ namespace PrimePaper.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ContractCreate model)
         {
-            if (ModelState.IsValid)
-            {
+            if (!ModelState.IsValid) return View(model);
 
-            }
+            var service = CreateContractService();
+
+            if (service.CreateContract(model))
+            {
+                TempData["SaveResult"] = "Your product was created. ";
+                return RedirectToAction("Index");
+            };
+            ModelState.AddModelError("", "Product could not be created.");
+
             return View(model);
         }
+
+        private ContractService CreateContractService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ContractService(userId);
+            return service;
+        }
+
     }
 }

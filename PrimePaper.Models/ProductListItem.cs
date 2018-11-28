@@ -11,6 +11,8 @@ namespace PrimePaper.Models
     {
         public int ProductId { get; set; }
         public string Type { get; set; }
+        public int Quantity { get; set; }
+        public decimal Price { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }

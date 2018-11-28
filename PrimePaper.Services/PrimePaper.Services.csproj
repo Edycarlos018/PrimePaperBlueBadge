@@ -54,11 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContractService.cs" />
+    <Compile Include="CustomerService.cs" />
+    <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrimePaper.Data\PrimePaper.Data.csproj">
+      <Project>{e999a400-5a60-42b3-9463-04e257e6b182}</Project>
+      <Name>PrimePaper.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrimePaper.Models\PrimePaper.Models.csproj">
+      <Project>{d59b5a76-78df-4711-8567-582be6dbe48b}</Project>
+      <Name>PrimePaper.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
