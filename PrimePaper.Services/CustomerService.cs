@@ -56,5 +56,38 @@ namespace PrimePaper.Services
                 return query.ToArray();
             }
         }
+        public CustomerDetail GetCustomerById(int customerId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Customers
+                        .Single(e => e.CustomerID == customerId && e.OwnerId == _userId);
+                return
+                    new CustomerDetail
+                    {
+                        CustomerID = entity.CustomerID,
+                        BusinessName = entity.BusinessName,
+                        Address = entity.Address,
+                        CellPhoneNumber = entity.CellPhoneNumber,
+                        CreatedUtc = entity.CreatedUtc
+                    };
+            }
+        }
+        public bool UpdateCustomer(CustomerEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Customers
+                        .Single(e => e.CustomerID == model.CustomerID && e.OwnerId == _userId);
+                entity.BusinessName = model.BusinessName;
+                entity.Address = model.Address;
+                entity.CellPhoneNumber = model.CellPhoneNumber;
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

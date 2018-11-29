@@ -44,6 +44,49 @@ namespace PrimePaper.WebMVC.Controllers
 
             return View(model);
         }
+        public ActionResult Details(int id)
+        {
+            var svc = CreateProductService();
+            var model = svc.GetProductById(id);
+
+            return View(model);
+        }
+        public ActionResult Edit(int id)
+        {
+            var service = CreateProductService();
+            var detail = service.GetProductById(id);
+            var model =
+                new ProductEdit
+                {
+                    ProductId = detail.ProductId,
+                    Type = detail.Type,
+                    Quantity = detail.Quantity,
+                    Price = detail.Price
+                };
+            return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, ProductEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.ProductId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+            var service = CreateProductService();
+
+            if (service.UpdateProduct(model))
+            {
+                TempData["SaveResult"] = "Your product was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your product could not be updated.");
+            return View();
+        }
 
         private ProductService CreateProductService()
         {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PrimePaper.Services
 {
-   public class ProductService
+    public class ProductService
     {
         private readonly Guid _userId;
 
@@ -52,7 +52,39 @@ namespace PrimePaper.Services
                                     Price = e.Price
                                 }
                         );
-                 return query.ToArray();
+                return query.ToArray();
+            }
+        }
+        public ProductDetail GetProductById(int productId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Products
+                        .Single(e => e.ProductId == productId && e.OwnerId == _userId);
+                return
+                    new ProductDetail
+                    {
+                        ProductId = entity.ProductId,
+                        Type = entity.Type,
+                        Quantity = entity.Quantity,
+                        Price = entity.Price
+                    };
+            }
+        }
+        public bool UpdateProduct(ProductEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Products
+                        .Single(e => e.ProductId == model.ProductId && e.OwnerId == _userId);
+                entity.Type = model.Type;
+                entity.Quantity = model.Quantity;
+                entity.Price = model.Price;
+                return ctx.SaveChanges() == 1;
             }
         }
     }
