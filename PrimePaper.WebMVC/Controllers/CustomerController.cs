@@ -88,6 +88,19 @@ namespace PrimePaper.WebMVC.Controllers
             ModelState.AddModelError("", "Your customer could not be updated.");
             return View();
         }
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            var service = CreateCustomerService();
+
+            service.DeleteCustomer(id);
+
+            TempData["SaveResult"] = "Your note was deleted";
+
+            return RedirectToAction("Index");
+        }
 
         private CustomerService CreateCustomerService()
         {

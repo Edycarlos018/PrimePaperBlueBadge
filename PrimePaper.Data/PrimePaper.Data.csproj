@@ -57,12 +57,36 @@
     <Compile Include="Contract.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\201811272212167_InitialCreate.cs" />
+    <Compile Include="Migrations\201811272212167_InitialCreate.Designer.cs">
+      <DependentUpon>201811272212167_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811292127471_added detail,edit and delete method.cs" />
+    <Compile Include="Migrations\201811292127471_added detail,edit and delete method.Designer.cs">
+      <DependentUpon>201811292127471_added detail,edit and delete method.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811301620330_adding ForeignKey.cs" />
+    <Compile Include="Migrations\201811301620330_adding ForeignKey.Designer.cs">
+      <DependentUpon>201811301620330_adding ForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811272212167_InitialCreate.resx">
+      <DependentUpon>201811272212167_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811292127471_added detail,edit and delete method.resx">
+      <DependentUpon>201811292127471_added detail,edit and delete method.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811301620330_adding ForeignKey.resx">
+      <DependentUpon>201811301620330_adding ForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

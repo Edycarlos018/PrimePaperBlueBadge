@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PrimePaper.Services
 {
-   public class CustomerService
+    public class CustomerService
     {
         private readonly Guid _userId;
 
@@ -86,6 +86,20 @@ namespace PrimePaper.Services
                 entity.BusinessName = model.BusinessName;
                 entity.Address = model.Address;
                 entity.CellPhoneNumber = model.CellPhoneNumber;
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteCustomer(int customerId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Customers
+                        .Single(e => e.CustomerID == customerId && e.OwnerId == _userId);
+
+                ctx.Customers.Remove(entity);
+
                 return ctx.SaveChanges() == 1;
             }
         }

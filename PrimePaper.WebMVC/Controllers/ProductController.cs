@@ -87,6 +87,28 @@ namespace PrimePaper.WebMVC.Controllers
             ModelState.AddModelError("", "Your product could not be updated.");
             return View();
         }
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateProductService();
+            var model = svc.GetProductById(id);
+
+            return View(model);
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateProductService();
+
+            service.DeleteProduct(id);
+
+            TempData["SaveResult"] = "Your note was deleted";
+            return RedirectToAction("Index");
+        }
 
         private ProductService CreateProductService()
         {

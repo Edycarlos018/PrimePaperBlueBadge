@@ -23,6 +23,8 @@ namespace PrimePaper.Services
                 new Contract()
                 {
                     OwnerId = _userId,
+                    CustomerID = model.CustomerID,
+                    ProductId = model.ProductId,
                     PaymentReceived = model.PaymentReceived,
                     PaymentsMethod = model.PaymentsMethod,
                     ContractLength = model.ContractLength
@@ -46,10 +48,12 @@ namespace PrimePaper.Services
                             e =>
                                 new ContractListItem
                                 {
-                                   ContractID = e.ContractID,
-                                   PaymentReceived = e.PaymentReceived,
-                                   PaymentsMethod = e.PaymentsMethod,
-                                   ContractLength = e.ContractLength
+                                    ContractID = e.ContractID,
+                                    CustomerID = e.CustomerID,
+                                    ProductId = e.ProductId,
+                                    PaymentReceived = e.PaymentReceived,
+                                    PaymentsMethod = e.PaymentsMethod,
+                                    ContractLength = e.ContractLength
                                 }
                         );
                 return query.ToArray();
