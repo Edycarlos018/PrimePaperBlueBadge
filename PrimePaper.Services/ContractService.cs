@@ -50,6 +50,8 @@ namespace PrimePaper.Services
                                 {
                                     ContractID = e.ContractID,
                                     CustomerID = e.CustomerID,
+                                    BusinessName = e.Customer.BusinessName,
+                                    Type = e.Product.Type,
                                     ProductId = e.ProductId,
                                     PaymentReceived = e.PaymentReceived,
                                     PaymentsMethod = e.PaymentsMethod,

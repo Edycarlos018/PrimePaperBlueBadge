@@ -16,6 +16,7 @@ namespace PrimePaper.Data
         public string PaymentsMethod { get; set; }
         public int ContractLength { get; set; }
 
-
+        public virtual Customer Customer { get; set;}
+        public virtual Product Product { get; set;}
     }
 }

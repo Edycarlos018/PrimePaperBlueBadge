@@ -70,5 +70,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrimePaper.Data\PrimePaper.Data.csproj">
+      <Project>{E999A400-5A60-42B3-9463-04E257E6B182}</Project>
+      <Name>PrimePaper.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

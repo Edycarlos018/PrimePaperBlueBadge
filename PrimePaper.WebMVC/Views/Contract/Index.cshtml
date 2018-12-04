@@ -21,11 +21,17 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CustomerID)
+            @Html.DisplayNameFor(model => model.Customer.BusinessName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Product.Type)
+        </th>
+        @*
+
+            
             @Html.DisplayNameFor(model => model.ContractID)
         </th>
+        *@<th>
         <th>
             @Html.DisplayNameFor(model => model.PaymentReceived)
         </th>
@@ -42,10 +48,13 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CustomerID)
+                @Html.DisplayFor(modelItem => item.BusinessName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ContractID)
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.HiddenFor(modelItem => item.ContractID)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PaymentReceived)

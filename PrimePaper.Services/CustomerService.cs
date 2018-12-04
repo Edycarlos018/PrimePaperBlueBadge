@@ -89,6 +89,7 @@ namespace PrimePaper.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
         public bool DeleteCustomer(int customerId)
         {
             using (var ctx = new ApplicationDbContext())
