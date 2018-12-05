@@ -1,0 +1,81 @@
+﻿@model PrimePaper.Models.ContractDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ContractDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentReceived)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentReceived)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentsMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentsMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContractID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

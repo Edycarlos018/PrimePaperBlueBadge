@@ -81,6 +81,14 @@
     <Compile Include="Migrations\201812041436347_second product dropdownlist.Designer.cs">
       <DependentUpon>201812041436347_second product dropdownlist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812042322571_Finished third table.cs" />
+    <Compile Include="Migrations\201812042322571_Finished third table.Designer.cs">
+      <DependentUpon>201812042322571_Finished third table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812051831166_Finished third table CRU.cs" />
+    <Compile Include="Migrations\201812051831166_Finished third table CRU.Designer.cs">
+      <DependentUpon>201812051831166_Finished third table CRU.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +115,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812041436347_second product dropdownlist.resx">
       <DependentUpon>201812041436347_second product dropdownlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812042322571_Finished third table.resx">
+      <DependentUpon>201812042322571_Finished third table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051831166_Finished third table CRU.resx">
+      <DependentUpon>201812051831166_Finished third table CRU.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

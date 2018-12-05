@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContractCreate.cs" />
+    <Compile Include="ContractDetail.cs" />
+    <Compile Include="ContractEdit.cs" />
     <Compile Include="ContractListItem.cs" />
     <Compile Include="CustomerCreate.cs" />
     <Compile Include="CustomerDetail.cs" />

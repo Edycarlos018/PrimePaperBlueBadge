@@ -61,8 +61,52 @@ namespace PrimePaper.WebMVC.Controllers
 
             return View(model);
         }
+        public ActionResult Details(int id)
+        {
+            var svc = CreateContractService();
+            var model = svc.GetContractById(id);
 
-    private ContractService CreateContractService()
+            return View(model);
+        }
+        public ActionResult Edit(int id)
+        {
+            var service = CreateContractService();
+            var detail = service.GetContractById(id);
+            var model =
+                new ContractEdit
+                {
+                    ContractID = detail.ContractID,
+                    PaymentReceived = detail.PaymentReceived,
+                    PaymentsMethod = detail.PaymentsMethod
+                    
+                };
+            return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, ContractEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.ContractID != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateContractService();
+
+            if (service.UpdateContract(model))
+            {
+                TempData["SaveResult"] = "Your contract was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your contract could not be updated.");
+            return View(model);
+        }
+
+        private ContractService CreateContractService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ContractService(userId);
