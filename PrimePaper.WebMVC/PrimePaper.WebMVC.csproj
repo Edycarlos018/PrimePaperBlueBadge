@@ -188,6 +188,13 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\aerial-background-bow-1537164.jpg" />
+    <Content Include="Content\assets\background-balls-boxes-1303098.jpg" />
+    <Content Include="Content\assets\background-bow-box-1534525.jpg" />
+    <Content Include="Content\assets\christmas-conifer-cone-decoration-639110.jpg" />
+    <Content Include="Content\assets\praiminho.png" />
+    <Content Include="Content\assets\PrimeLogo.png" />
+    <Content Include="Content\assets\Youthedesigner-Christmas-Graphics-Santa-hat.ico" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
