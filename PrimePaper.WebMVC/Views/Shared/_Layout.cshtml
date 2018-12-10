@@ -31,13 +31,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Product", "Index", "Product")</li>
-                    }
-                    @if (User.Identity.IsAuthenticated)
-                    {
                         <li>@Html.ActionLink("Customer", "Index", "Customer")</li>
-                    }
-                    @if (User.Identity.IsAuthenticated)
-                    {
                     <li>@Html.ActionLink("Contract", "Index", "Contract")</li>
                     }
                     <li>@Html.ActionLink("About", "About", "Home")</li>

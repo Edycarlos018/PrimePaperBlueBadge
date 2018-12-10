@@ -188,12 +188,20 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\A4Papers1.jpg" />
     <Content Include="Content\assets\aerial-background-bow-1537164.jpg" />
     <Content Include="Content\assets\background-balls-boxes-1303098.jpg" />
     <Content Include="Content\assets\background-bow-box-1534525.jpg" />
     <Content Include="Content\assets\christmas-conifer-cone-decoration-639110.jpg" />
+    <Content Include="Content\assets\kelly-sikkema-382044-unsplash.jpg" />
+    <Content Include="Content\assets\photo-1495364037436-fed1ba81ad3e.jpg" />
+    <Content Include="Content\assets\photo-1516535928439-27a66ff7a92a.jpg" />
+    <Content Include="Content\assets\photo-1526541260187-fe49a4f44fc5.jpg" />
+    <Content Include="Content\assets\photo-1527176930608-09cb256ab504.jpg" />
     <Content Include="Content\assets\praiminho.png" />
     <Content Include="Content\assets\PrimeLogo.png" />
+    <Content Include="Content\assets\scroll-3069306_960_720.png" />
+    <Content Include="Content\assets\Scroll-Font-Old-Antique-Parchment-Paper-Leave-1760402.jpg" />
     <Content Include="Content\assets\Youthedesigner-Christmas-Graphics-Santa-hat.ico" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
