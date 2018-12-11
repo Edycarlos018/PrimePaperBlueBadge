@@ -194,12 +194,18 @@
     <Content Include="Content\assets\background-bow-box-1534525.jpg" />
     <Content Include="Content\assets\christmas-conifer-cone-decoration-639110.jpg" />
     <Content Include="Content\assets\kelly-sikkema-382044-unsplash.jpg" />
+    <Content Include="Content\assets\letters-leave-pen-parking-ticket-163059.jpeg" />
+    <Content Include="Content\assets\pexels-photo-1549704.jpeg" />
+    <Content Include="Content\assets\pexels-photo-908295.jpeg" />
     <Content Include="Content\assets\photo-1495364037436-fed1ba81ad3e.jpg" />
     <Content Include="Content\assets\photo-1516535928439-27a66ff7a92a.jpg" />
     <Content Include="Content\assets\photo-1526541260187-fe49a4f44fc5.jpg" />
     <Content Include="Content\assets\photo-1527176930608-09cb256ab504.jpg" />
+    <Content Include="Content\assets\Praiminho.jpg" />
     <Content Include="Content\assets\praiminho.png" />
+    <Content Include="Content\assets\primefoto1.jpg" />
     <Content Include="Content\assets\PrimeLogo.png" />
+    <Content Include="Content\assets\primelogo1.jpg" />
     <Content Include="Content\assets\scroll-3069306_960_720.png" />
     <Content Include="Content\assets\Scroll-Font-Old-Antique-Parchment-Paper-Leave-1760402.jpg" />
     <Content Include="Content\assets\Youthedesigner-Christmas-Graphics-Santa-hat.ico" />
@@ -207,6 +213,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\video\VIDEO-2018-11-28-12-59-16.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
