@@ -1,10 +1,16 @@
 ﻿html body {
+    background-image: url('assets/pexels-photo-164642.jpeg');
     padding-top: 143px;
-    background-position: center;
+    background-position: top center;
     background-repeat: no-repeat;
-    background-size: 105em;
+    background-size: 122em;
     padding-bottom: 406px;
+    background-size: cover;
 }
+
+/*#body {
+    background-size: cover;
+}*/
 
 .homeindex {
     background-image: url('assets/christmas-conifer-cone-decoration-639110.jpg');
@@ -15,8 +21,8 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 97px;
+    padding-right: 183px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -34,13 +40,9 @@ textarea {
 }
 
 .jumbotron {
-    /*background-image: url('/Content/assets/christmas-conifer-cone-decoration-639110.jpg');*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*margin-top: 4em;
-    margin-bottom: 4em;
-    margin-left:-1.8em;*/
     margin: 4em 4em 4em 4em
 }
 
@@ -73,8 +75,6 @@ textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*margin-top: 0em;
-    margin-bottom: 4em;*/
     width: 1045px;
     height: 397.6px;
     border: 1px double;
@@ -90,7 +90,6 @@ textarea {
     height: 397.6px;
     border: 1px double;
     border-color: red;
-    /*margin:0em 4px 4em 4px;*/
 }
 
 #right {
@@ -98,17 +97,12 @@ textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*margin-top: 0em;
-    margin-bottom: 4em;*/
     width: 1045px;
     height: 397.6px;
     border: 1px double;
     border-color: red;
 }
 
-#body {
-    background-color: dimgrey;
-}
 
 #santahat {
     margin-left: 181px;
@@ -122,8 +116,27 @@ textarea {
 #rowhome1 {
     margin-left: 347.5px;
 }
+
 #rowhome2 {
     margin-left: 445.5px;
+}
+#myCarousel {
+    width: 1045px;
+    height: 350px;
+}
+
+#carouselpicture {
+    margin-left: 304.5px;
+    margin-top: 45px;
+}
+
+#carouselpicture1 {
+    margin-left: 400.5px;
+    margin-top: 45px;
+}
+
+.carousel-indicators {
+    bottom: -59px;
 }
 
 .btn-danger {
@@ -140,26 +153,21 @@ textarea {
 }
 
 .productIndex {
-    /*background-image: url('assets/scroll-3069306_960_720.png');
-   width:1200px;
-   height:600px;*/
-    padding-top: 143px;
+    background-size: cover;
+    padding-top: 291px;
 }
 
 .customerindex {
-    background-image: url('assets/scroll-3069306_960_720.png');
-    padding-top: 140px;
-    padding-bottom: 338px;
+    background-size: cover;
+    padding-top: 291px;
 }
 
 .contractindex {
-    background-image: url('assets/scroll-3069306_960_720.png');
-    padding-top: 135px;
-    padding-bottom: 372px;
+    background-size: cover;
+    padding-top: 291px;
 }
 
 .aboutindex {
-    background-image: url('assets/Scroll-Font-Old-Antique-Parchment-Paper-Leave-1760402.jpg');
     background-size: cover;
     padding-top: 291px;
 }
@@ -183,42 +191,15 @@ hr {
     padding-right: 70px;
 }
 
-#myCarousel {
-    width: 1045px;
-    height: 350px;
-}
-
-#carouselpicture {
-    margin-left: 304.5px;
-    margin-top: 45px;
-}
-
-#carouselpicture1 {
-    margin-left: 400.5px;
-    margin-top: 45px;
-}
-
-.carousel-indicators {
-    bottom: -59px;
-}
-#mytable{
-    background-color:antiquewhite;
-    opacity:0.8;
-    color:black;
-    margin-top:-40em;
-}
-
-.scroll{
+/*.scroll{
     width: 100vw;
-}
-#scroll{
-    margin-top:-151px;
-    width:1398px;
-    height:903px;
-    margin-left:-153px;
-    padding-left:30px;
+}*/
 
+#productcreate {
+    margin-top: 0em;
 }
-#productcreate{
-    margin-top:0em;
+
+.table {
+    margin-left: 0;
+    margin-right: 0;
 }

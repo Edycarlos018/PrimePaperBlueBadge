@@ -66,9 +66,9 @@
                 @Html.DisplayFor(modelItem => item.CreatedUtc)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {id=item.CustomerID  }) |
-                @Html.ActionLink("Details", "Details", new { id = item.CustomerID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.CustomerID })
+                @Html.ActionLink("  ", "Edit", new {id=item.CustomerID  }, htmlAttributes: new { @class = "glyphicon glyphicon-pencil" }) 
+                @Html.ActionLink("  ", "Details", new { id = item.CustomerID }, htmlAttributes: new { @class = "glyphicon glyphicon-info-sign" }) 
+                @Html.ActionLink("  ", "Delete", new { id = item.CustomerID }, htmlAttributes: new { @class = "glyphicon glyphicon-trash" })
             </td>
         </tr>
     }

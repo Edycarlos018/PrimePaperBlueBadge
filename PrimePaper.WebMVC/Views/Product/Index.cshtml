@@ -6,7 +6,7 @@
 <body class="productIndex">
 
     <div class="scroll">
-        <img id="scroll" src="~/Content/assets/scroll-3069306_960_720.png" />
+        @*<img id="scroll" src="~/Content/assets/scroll-3069306_960_720.png" />*@
         <h2 id="productcreate">Product</h2>
 
         <p id="productcreate">
@@ -67,9 +67,9 @@
                         @Html.DisplayFor(modelItem => item.CreatedUtc)
                     </td>
                     <td>
-                        @Html.ActionLink(" ", "Edit", new { id = item.ProductId }, htmlAttributes: new { @class = "glyphicon glyphicon-pencil" }) |
-                        @Html.ActionLink(" ", "Details", new { id = item.ProductId }, htmlAttributes: new { @class = "glyphicon glyphicon-info-sign" }) |
-                        @Html.ActionLink(" ", "Delete", new { id = item.ProductId }, htmlAttributes: new { @class = "glyphicon glyphicon-trash" })
+                        @Html.ActionLink("    ", "Edit", new { id = item.ProductId }, htmlAttributes: new { @class = "glyphicon glyphicon-pencil" }) 
+                        @Html.ActionLink("    ", "Details", new { id = item.ProductId }, htmlAttributes: new { @class = "glyphicon glyphicon-info-sign" }) 
+                        @Html.ActionLink("    ", "Delete", new { id = item.ProductId }, htmlAttributes: new { @class = "glyphicon glyphicon-trash" })
                     </td>
                 </tr>
             }
