@@ -89,6 +89,10 @@
     <Compile Include="Migrations\201812051831166_Finished third table CRU.Designer.cs">
       <DependentUpon>201812051831166_Finished third table CRU.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812121821379_added createtime in product.cs" />
+    <Compile Include="Migrations\201812121821379_added createtime in product.Designer.cs">
+      <DependentUpon>201812121821379_added createtime in product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812051831166_Finished third table CRU.resx">
       <DependentUpon>201812051831166_Finished third table CRU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812121821379_added createtime in product.resx">
+      <DependentUpon>201812121821379_added createtime in product.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

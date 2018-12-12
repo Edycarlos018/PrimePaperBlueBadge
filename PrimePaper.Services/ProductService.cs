@@ -25,6 +25,8 @@ namespace PrimePaper.Services
                     Type = model.Type,
                     Quantity = model.Quantity,
                     Price = model.Price,
+                    CreatedUtc = DateTime.Now
+
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -49,7 +51,8 @@ namespace PrimePaper.Services
                                     ProductId = e.ProductId,
                                     Type = e.Type,
                                     Quantity = e.Quantity,
-                                    Price = e.Price
+                                    Price = e.Price,
+                                    CreatedUtc = e.CreatedUtc
                                 }
                         );
                 return query.ToArray();
@@ -69,7 +72,8 @@ namespace PrimePaper.Services
                         ProductId = entity.ProductId,
                         Type = entity.Type,
                         Quantity = entity.Quantity,
-                        Price = entity.Price
+                        Price = entity.Price,
+                        CreatedUtc = entity.CreatedUtc
                     };
             }
         }
