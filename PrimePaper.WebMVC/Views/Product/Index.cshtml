@@ -4,12 +4,11 @@
     ViewBag.Title = "Index";
 }
 <body class="productIndex">
+        <!--TODO: Fix View Issue-->
 
-    <div class="scroll">
-        @*<img id="scroll" src="~/Content/assets/scroll-3069306_960_720.png" />*@
-        <h2 id="productcreate">Product</h2>
+        <h2>Product</h2>
 
-        <p id="productcreate">
+        <p>
             @Html.ActionLink("Create New", "Create")
         </p>
         @if (TempData.ContainsKey("SaveResult"))
@@ -21,14 +20,7 @@
                 @TempData["SaveResult"]
             </div>
         }
-        <style type="text/css">
-
-
-            .table th, .table td {
-                text-align: center;
-            }
-        </style>
-        <table class="table" id="mytable">
+        <table class="table">
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.ProductId)
@@ -75,5 +67,4 @@
             }
 
         </table>
-    </div>
 </body>

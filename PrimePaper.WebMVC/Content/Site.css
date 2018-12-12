@@ -6,6 +6,7 @@
     background-size: 122em;
     padding-bottom: 406px;
     background-size: cover;
+    padding-bottom:16px;
 }
 
 /*#body {
@@ -21,8 +22,9 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 97px;
-    padding-right: 183px;
+    padding-left: 146px;
+    padding-right: 222px;
+    padding-top:170px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -45,6 +47,12 @@ textarea {
     background-size: cover;
     margin: 4em 4em 4em 4em
 }
+
+
+.table th, .table td {
+    text-align: center;
+}
+
 
 #primename {
     color: black;
@@ -154,22 +162,26 @@ textarea {
 
 .productIndex {
     background-size: cover;
-    padding-top: 291px;
+    padding-top: 170px;
 }
 
 .customerindex {
     background-size: cover;
-    padding-top: 291px;
+    padding-top: 170px;
 }
 
 .contractindex {
     background-size: cover;
-    padding-top: 291px;
+    padding-top: 170px;
 }
 
 .aboutindex {
     background-size: cover;
-    padding-top: 291px;
+    padding-top: 170px;
+}
+.contactindex {
+    background-size: cover;
+    padding-top: 170px;
 }
 
 .container .jumbotron {
@@ -194,10 +206,6 @@ hr {
 /*.scroll{
     width: 100vw;
 }*/
-
-#productcreate {
-    margin-top: 0em;
-}
 
 .table {
     margin-left: 0;

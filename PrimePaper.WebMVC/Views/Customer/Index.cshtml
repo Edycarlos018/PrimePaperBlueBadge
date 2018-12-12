@@ -20,13 +20,6 @@
         @TempData["SaveResult"]
     </div>
 }
-    <style type="text/css">
-
-
-        .table th, .table td {
-            text-align: center;
-        }
-    </style>
 <table class="table">
     <tr>
         <th>
@@ -66,8 +59,8 @@
                 @Html.DisplayFor(modelItem => item.CreatedUtc)
             </td>
             <td>
-                @Html.ActionLink("  ", "Edit", new {id=item.CustomerID  }, htmlAttributes: new { @class = "glyphicon glyphicon-pencil" }) 
-                @Html.ActionLink("  ", "Details", new { id = item.CustomerID }, htmlAttributes: new { @class = "glyphicon glyphicon-info-sign" }) 
+                @Html.ActionLink("  ", "Edit", new { id = item.CustomerID }, htmlAttributes: new { @class = "glyphicon glyphicon-pencil" })
+                @Html.ActionLink("  ", "Details", new { id = item.CustomerID }, htmlAttributes: new { @class = "glyphicon glyphicon-info-sign" }) |
                 @Html.ActionLink("  ", "Delete", new { id = item.CustomerID }, htmlAttributes: new { @class = "glyphicon glyphicon-trash" })
             </td>
         </tr>
