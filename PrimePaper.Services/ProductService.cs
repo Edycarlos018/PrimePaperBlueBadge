@@ -24,6 +24,7 @@ namespace PrimePaper.Services
                     OwnerId = _userId,
                     Type = model.Type,
                     Quantity = model.Quantity,
+                    Description = model.Description,
                     Price = model.Price,
                     CreatedUtc = DateTime.Now
 
@@ -51,6 +52,7 @@ namespace PrimePaper.Services
                                     ProductId = e.ProductId,
                                     Type = e.Type,
                                     Quantity = e.Quantity,
+                                    Description = e.Description,
                                     Price = e.Price,
                                     CreatedUtc = e.CreatedUtc
                                 }
@@ -72,6 +74,7 @@ namespace PrimePaper.Services
                         ProductId = entity.ProductId,
                         Type = entity.Type,
                         Quantity = entity.Quantity,
+                        Description = entity.Description,
                         Price = entity.Price,
                         CreatedUtc = entity.CreatedUtc
                     };
@@ -87,6 +90,7 @@ namespace PrimePaper.Services
                         .Single(e => e.ProductId == model.ProductId && e.OwnerId == _userId);
                 entity.Type = model.Type;
                 entity.Quantity = model.Quantity;
+                entity.Description = model.Description;
                 entity.Price = model.Price;
                 return ctx.SaveChanges() == 1;
             }

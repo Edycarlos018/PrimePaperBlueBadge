@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace PrimePaper.Models
 {
-  public  class CustomerDetail
+    public class CustomerDetail
     {
+        [Display(Name = "Customer ID")]
         public int CustomerID { get; set; }
+        [Display(Name = "Name of Business")]
         public string BusinessName { get; set; }
         public string Address { get; set; }
+        [Display(Name = "Phone Number")]
         public string CellPhoneNumber { get; set; }
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }

@@ -36,11 +36,9 @@
             @Html.DisplayNameFor(model => model.Product.Type)
         </th>
         @*
-
-            
+        <th>
             @Html.DisplayNameFor(model => model.ContractID)
-        </th>
-        *@<th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.PaymentReceived)
         </th>
@@ -62,9 +60,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
-            <td>
+            @*<td>
                 @Html.HiddenFor(modelItem => item.ContractID)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.PaymentReceived)
             </td>

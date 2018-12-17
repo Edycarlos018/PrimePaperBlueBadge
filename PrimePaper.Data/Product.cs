@@ -25,6 +25,9 @@ namespace PrimePaper.Data
         public decimal Price { get; set; }
 
         [Required]
+        public string Description { get; set; }
+
+        [Required]
         public DateTimeOffset CreatedUtc { get; set; }
     }
 }

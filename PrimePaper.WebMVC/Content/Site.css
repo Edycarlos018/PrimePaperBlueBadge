@@ -7,6 +7,7 @@
     padding-bottom: 406px;
     background-size: cover;
     padding-bottom:16px;
+
 }
 
 /*#body {
@@ -18,13 +19,16 @@
     padding-bottom: 16px;
     background-size: cover;
     margin-top: -253px;
+    margin-left:-271px;
 }
-
+#homeindex1 {
+    padding-left: 70px;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 70px;
+    padding-left: 142px;
     padding-right: 222px;
-    padding-top:170px;
+    padding-top: 170px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -189,7 +193,7 @@ textarea {
 }
 
 .footerindex {
-    margin-top: -1em;
+    margin-top: 4em;
 }
 
 hr {

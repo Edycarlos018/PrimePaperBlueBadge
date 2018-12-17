@@ -61,6 +61,7 @@ namespace PrimePaper.WebMVC.Controllers
                     ProductId = detail.ProductId,
                     Type = detail.Type,
                     Quantity = detail.Quantity,
+                    Description = detail.Description,
                     Price = detail.Price
                 };
             return View(model);

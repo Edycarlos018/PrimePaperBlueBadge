@@ -12,12 +12,14 @@ namespace PrimePaper.Models
         [Required]
         [MinLength(2, ErrorMessage ="Please enter at least 2 characters.")]
         [MaxLength(100, ErrorMessage ="There are to many characters in this field")]
+        [Display(Name = "Name of Business")]
         public string BusinessName { get; set; }
 
         [Required]
         public string Address { get; set; }
 
         [Required]
+        [Display(Name = "Phone Number")]
         public string CellPhoneNumber { get; set; }
     }
 }

@@ -9,9 +9,12 @@ namespace PrimePaper.Models
 {
    public class CustomerListItem
     {
+        [Display(Name = "Customer ID")]
         public int CustomerID { get; set; }
+        [Display(Name = "Name of Business")]
         public string BusinessName { get; set; }
         public string Address { get; set; }
+        [Display(Name = "Phone Number")]
         public string CellPhoneNumber { get; set; }
 
         [Display(Name = "Created")]
