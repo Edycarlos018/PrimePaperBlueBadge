@@ -13,6 +13,11 @@ using PrimePaper.WebMVC.Models;
 
 namespace PrimePaper.WebMVC.Controllers
 {
+    //Adding SSl to an app
+#if !DEBUG
+    [RequireHttps]
+​
+#endif
     [Authorize]
     public class AccountController : Controller
     {

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimePaper.Services", "Prim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimePaper.Tests", "PrimePaper.Tests\PrimePaper.Tests.csproj", "{B1B0A51C-FF84-4FC6-9D02-3370891025A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimePaper.WebApi", "PrimePaper.WebApi\PrimePaper.WebApi.csproj", "{EDBDAE82-695E-41F0-8B35-BCFE8A5ACAA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B1B0A51C-FF84-4FC6-9D02-3370891025A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1B0A51C-FF84-4FC6-9D02-3370891025A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1B0A51C-FF84-4FC6-9D02-3370891025A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBDAE82-695E-41F0-8B35-BCFE8A5ACAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBDAE82-695E-41F0-8B35-BCFE8A5ACAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBDAE82-695E-41F0-8B35-BCFE8A5ACAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBDAE82-695E-41F0-8B35-BCFE8A5ACAA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
